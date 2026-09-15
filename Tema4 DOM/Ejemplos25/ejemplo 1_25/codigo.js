@@ -164,7 +164,7 @@ const archivo = new Blob(
       `
 </html>`,
   ],
-  { type: "html" }
+  { type: "html" },
 );
 const url = URL.createObjectURL(archivo);
 a.href = url;

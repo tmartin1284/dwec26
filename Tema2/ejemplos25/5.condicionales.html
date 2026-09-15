@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <!-- Bootstrap CSS v5.3.8 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+               <script>
+                    //Creamos un ejemplo de condicional if-else
+
+                    let numero = prompt("Introduce un número:"); // Pedimos al usuario que introduzca un número
+
+                    if (numero > 0) {
+                         console.log("El número es positivo.");
+                    } else if (numero < 0) {
+                         console.log("El número es negativo.");
+                    } else {
+                         console.log("El número es  cero.");
+                    } //Creamos un ejemplo de condicional if-else let numero=prompt("Introduce un número: "); //
+
+                    //vamos a probar un ejemplo de condicional switch-case
+
+                    let fruit = prompt("Introduce una fruta (manzana, platano, naranja, zanahoria):"); // Pedimos al usuario que introduzca una fruta
+                    fruit = fruit.toLowerCase(); // Convertimos la entrada a minúsculas para evitar problemas de mayúsculas/minúsculas
+
+                    switch (fruit) {
+                         case "manzana":
+                              console.log("Esto es una manzana.");
+                              break;
+                         case "platano":
+                              console.log("Esto es un plátano.");
+                              break;
+                         case "naranja":
+                              console.log("Esto es una naranja.");
+                              break;
+                         case "zanahoria":
+                              console.log("Cuidao que se lo come Manolo.");
+                              break;
+                         default:
+                              console.log("Fruta desconocida.");
+                    }
+
+
+                    /*operador ternario. ojo ahora parece que no es importante, pero en la parte
+                    de react, es muy importante, porque nos permite hacer condicionales
+                     en una sola línea de código*/
+
+                    let age = 18;
+                    let canVote = age >= 18 ? "Sí, puedes votar." : "No, no puedes votar.";
+                    console.log(canVote);
+
+
+               </script>
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+               integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+               crossorigin="anonymous"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+               integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+               crossorigin="anonymous"></script>
+
+
+     </body>
+
+</html>
