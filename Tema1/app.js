@@ -5,3 +5,7 @@ document.writeln("<h3>aaaaaaaaaaaaaaaaa</H3>");
 alert("hola mundo");
 
 console.log(document.body.outerHTML);
+
+function notificar() {
+     alert("hola mundo !!!");
+}

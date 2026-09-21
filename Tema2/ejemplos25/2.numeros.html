@@ -34,7 +34,6 @@
                     let flotanteNegativo = -9.45;
                     let numeroGrande = 150000000;
 
-                    numeroGrande = "Tomas";
                     console.log("Número entero: " + entero);
                     console.log("Número de punto flotante: " + puntoFlotante);
                     console.log("Número cero: " + cero);
@@ -76,6 +75,7 @@
                     let esMenorOIgualQue = 5 <= 5; // true
                     let esMayorOIgualQue = 10 >= 10; // true
                     let esIgual = 5 == "5"; // true (coerción de tipos)
+                    let esIgual2 = 5 == "5. "; // true (coerción de tipos)
                     let esEstrictamenteIgual = 5 === 5; // true
                     let esDistinto = 5 != "5"; // false (coerción de tipos)
 
@@ -84,6 +84,7 @@
                     console.log("5 <= 5: " + esMenorOIgualQue);
                     console.log("10 >= 10: " + esMayorOIgualQue);
                     console.log("5 == '5': " + esIgual);
+                    console.log("5 == '5 ': " + esIgual2);
                     console.log("5 === 5: " + esEstrictamenteIgual);
                     console.log("5 != '5': " + esDistinto);
 
@@ -113,7 +114,7 @@
                     // NaN (No es un número)
                     let noEsUnNumero = NaN;
                     let chequeoNaN1 = isNaN(-12.3); // false
-                    let chequeoNaN2 = isNaN('12.3 '); // true
+                    let chequeoNaN2 = isNaN('12.3 '); // true hace coercion
                     let chequeoNaN3 = isNaN("Hola"); // true
 
                     console.log("Chequeo NaN con 123: " + chequeoNaN1);
@@ -130,15 +131,20 @@
                     console.log("Resta de variable2 + variable1: " + (variable2 + variable1));
                     console.log("Suma de variable1 + variable2: " + (variable1 - variable2)); // '456789'
                     console.log("Resta de variable2 + variable1: " + (variable2 - variable1));
-
+                    if (typeof variable2 === "number") {
+                         let variable3 = parseInt(variable2); // Convierte '789' a 789
+                         console.log("Resta de variable2 parseada + variable1: " + (variable3 + variable1));
+                    }
 
 
                     // Convertir número a cadena
                     let numeroACadena = (123).toString(); // '123'
-
+                    console.log("Número a cadena: " + numeroACadena);
                     // Formatear número a decimales fijos
                     let decimalFijo = (123.456).toFixed(2); // '123.46'
-
+                    console.log("Número a decimal fijo: " + decimalFijo);
+                    // Convertir cadena a número
+                    let cadenaANumero = parseInt("123"); // 123
 
 
 

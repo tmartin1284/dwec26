@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <!-- Bootstrap CSS v5.3.8 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+               <script>
+
+                    let texto = null;
+                    // Función A toma la función B como parámetro de callback
+                    function A(callback) {
+                         // Lógica de la función A
+                         console.log("A. Dentro de la función A");
+
+                         // Invoca la función callback B
+                         console.log("A. Llamando a la función callback B desde A");
+                         callback();
+                         console.log("A. y sigo dentro de A");
+                    }
+
+                    // Función B (función callback)
+                    function B() {
+                         texto = "b. hola Ruben";
+                         console.log("b. Ruben atiende");
+                    }
+
+                    console.log("f1 Llamando a la función A y pasando la función B como callback");
+                    // Llama a la función A y pasa la función B como callback
+                    A(B);
+                    console.log("f2 despues de la llamada a A con B de callback: texto vale: " + texto);
+
+                    function C() {
+                         texto = "c. hola Jorge";
+                         console.log("c. Jorge feo");
+                    }
+                    console.log("g1 Llamando a la función A y pasando la función C como callback");
+                    A(C);
+                    console.log("g2 despues de la llamada a A con C de callback: texto vale: " + texto);
+
+
+
+               </script>
+
+
+
+
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>

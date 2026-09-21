@@ -36,18 +36,25 @@
 
                     /*poco que añadir, no? */
 
+                    let fruits = ["apple", "banana", "orange"];
+                    console.log("vamos a imprimir frutas" + fruits.length); // 3
+                    for (let i = 0; i < fruits.length; i++) {
+                         console.log(i + ": " + fruits[i]);
+                    }
+
 
                     /*for in y for of. ES muy común confundirlos, pero el primero se
                     usa con objetos y el segundo con arrays*/
-                    let person = { name: "John", age: 30, city: "New York" };
+                    let person = { name: "Jorge Piña", age: 20, city: "Alameda de la Sagra City" };
+
                     for (let key in person) {
                          console.log(key + ": " + person[key]);
                     }
-
+                    if (person.nombre) console.log("nombre: " + person.nombre);// devuelve nombre: Jorge Piña
+                    if (person.name) console.log("NAME: " + person.name);// devuelve nombre: Jorge Piña
                     /*aqui mostramos las propiedades de persona, sin saber cuales son sus propiedades
                     el propio lenguaje nos da las propiedades de un objeto, y podemos acceder a ellas con la notación de corchetes*/
 
-                    let fruits = ["apple", "banana", "orange"];
                     for (let fruit of fruits) {
                          console.log(fruit);
                     }
@@ -63,7 +70,7 @@
                     ];
 
                     //lo podemos manejar con un for in y for of
-
+                    console.log("vamos a imprimir usuarios con for of y for in");
                     for (let user of users) {
                          for (let p in user) {
                               console.log(`${p}: ${user[p]}`); //fijaos que estamos usando literales
@@ -71,7 +78,7 @@
                     }
 
 
-                    /* ahora podemos recorrer los usuarios de la forma tradicional, es decir, con un for, 
+                    /* ahora podemos recorrer los usuarios de la forma tradicional, es decir, con un for,
                     y dentro de ese for, podemos recorrer las propiedades de cada usuario con un for in*/
 
 
@@ -88,7 +95,7 @@
                               );
                          }
                     }
-
+                    console.log("vamos a imprimir usuarios con for y for in en la funcion printUser");
 
                     for (i = 0; i < users.length; i++) {
                          printUser(users[i]);
@@ -99,12 +106,13 @@
                     un forEach, que es un método de los arrays, y le pasamos una función, 
                     y dentro de esa función podemos poner el codigo que nos dé la gana*/
 
+                    console.log("Hola Hiba");
 
-
-                    users.forEach(printUser); //le estamos pasando una función, y dentro podemos poner el codigo que nos dé la gana
-
-
-//o bien podemos crear una funcion anonima, y pasarsela
+                    /*
+                                        users.forEach(printUser); //le estamos pasando una función, y dentro podemos poner el codigo que nos dé la gana
+                    
+                                        /* */
+                    //o bien podemos crear una funcion anonima, y pasarsela
 
                     users.forEach(
                          (user, indice) => {

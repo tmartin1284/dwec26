@@ -29,6 +29,16 @@
                     let infoPlataforma = navigator.platform;
                     console.log(`Plataforma: ${infoPlataforma}`);
 
+                    console.log(`Ancho de la pantalla: ${screen.width}px`);
+                    console.log(`Altura de la pantalla: ${screen.height}px`);
+                    console.log(`Ancho disponible de la pantalla: ${screen.availWidth}px`);
+                    console.log(`Altura disponible de la pantalla: ${screen.availHeight}px`);
+                    console.log(`Profundidad de color: ${screen.colorDepth} bits`);
+                    console.log(`Profundidad de píxeles: ${screen.pixelDepth} bits`);
+
+
+
+
                     // Geolocalización
                     if ("geolocation" in navigator) {
                          navigator.geolocation.getCurrentPosition(
@@ -46,12 +56,6 @@
 
 
 
-                    console.log(`Ancho de la pantalla: ${screen.width}px`);
-                    console.log(`Altura de la pantalla: ${screen.height}px`);
-                    console.log(`Ancho disponible de la pantalla: ${screen.availWidth}px`);
-                    console.log(`Altura disponible de la pantalla: ${screen.availHeight}px`);
-                    console.log(`Profundidad de color: ${screen.colorDepth} bits`);
-                    console.log(`Profundidad de píxeles: ${screen.pixelDepth} bits`);
                </script>
 
           </main>

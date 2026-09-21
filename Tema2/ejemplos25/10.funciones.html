@@ -39,6 +39,34 @@
 
                     console.log(`la suma es ${suma(3, 5)}`);
 
+                    // 1. Función por expresión
+                    const multiply = function multiplication(a, b) {
+                         return a * b;
+                    };
+
+
+                    // Llamada a la función
+                    let result = multiply(5, 3);
+                    console.log("la multiplicacion es " + result); // Salida: 15
+
+                    // 2. Función Lambda o anónima por expresión
+                    const divide = function (a, b) {
+                         return a / b;
+                    };
+
+                    // Llamada a la función
+                    let resultDiv = divide(15, 3);
+                    console.log("la division es " + resultDiv); // Salida: 5
+
+
+
+
+
+
+
+
+
+
 
                     const sumarconst = function (a, b) {
                          return a + b;
@@ -84,6 +112,8 @@
                     const f1 = function (a) {
                          return a + 100;
                     };
+                    console.log("función f1  " + f1(5))
+
 
                     // Desglose de la Función Arrow
 
@@ -92,11 +122,16 @@
                          return a + 100;
                     };
 
+                    console.log("función f2 " + f2(5))
                     // 2. Elimina las llaves del cuerpo y la palabra clave "return" — el retorno es implícito.
                     const f3 = (a) => a + 100;
 
+                    console.log("función f3 " + f3(65))
+
                     // 3. Omite los paréntesis alrededor del argumento si hay un solo argumento
                     const f4 = a => a + 100;
+
+                    console.log("función f4 " + f4(5))
 
                </script>
           </main>
