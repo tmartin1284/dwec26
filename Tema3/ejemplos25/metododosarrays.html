@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <!-- Bootstrap CSS v5.3.8 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+
+               <script>
+                    const fruits = ["Apple", "Banana"];
+                    fruits.forEach((fruit) => console.log(fruit)); // Salida: "Apple", "Banana"
+                    fruits.push("Cherry");
+                    console.log(fruits); // Salida: ["Apple", "Banana", "Cherry"]
+
+
+                    const lastFruit = fruits.pop();
+                    console.log(lastFruit); // Salida: Cherry
+                    console.log(fruits); // Salida: ["Apple", "Banana"]
+
+                    fruits.push("melocoton");
+                    fruits.push("sandia");
+                    fruits.push("pina");
+
+                    fruits.forEach((fruit) => console.log(fruit)); // Salida: "Apple", "Banana"
+
+                    const firstFruit = fruits.shift();
+                    console.log(firstFruit); // Salida: Apple
+                    console.log(fruits); // Salida: ["Banana"]
+
+                    fruits.unshift("fresa");
+                    console.log(fruits); // Salida: ["fresa", "Banana"]
+
+
+
+                    const moreFruits = ["Cherry", "Date", "mandarina", "kiwi", "naranja"];
+                    const allFruits = fruits.concat(moreFruits);
+                    console.log(allFruits); // Salida: ["Apple", "Banana", "Cherry", "Date"]
+                    console.log(fruits);
+                    console.log(moreFruits);
+
+                    fruits.pop("cherry");
+
+                    const someFruits = allFruits.slice(3, 6);
+                    console.log(someFruits); // Salida: ["Banana", "Cherry"]
+
+
+                    allFruits.splice(2, 2, "Blueberry", "quince", "cereza", "limon", "pomelo");
+                    console.log(allFruits);
+
+
+
+                    console.log("estoy vivo"); // Salida: ["Apple", "Banana", "Cherry", "Date"]
+               </script>
+
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>

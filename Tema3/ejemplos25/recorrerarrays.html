@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+     <head>
+          <title>Title</title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <!-- Bootstrap CSS v5.3.8 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+               crossorigin="anonymous" />
+     </head>
+
+     <body>
+          <header>
+               <!-- place navbar here -->
+          </header>
+          <main>
+               <script>
+
+                    // Declarar un array
+                    const colors = ["Red", "Green", "Blue", "Yellow"];
+
+                    // Acceder a los elementos por índice
+                    console.log(colors[0]); // Salida: Red
+                    console.log(colors[1]); // Salida: Green
+                    console.log(colors[2]); // Salida: Blue
+                    console.log(colors[3]); // Salida: Yellow
+
+                    // Acceder al último elemento usando la propiedad length
+                    console.log(colors[colors.length - 1]); // Salida: Yellow
+
+                    // Modificar un elemento por índice
+                    colors[1] = "Purple";
+                    console.log(colors); // Salida: ["Red", "Purple", "Blue", "Yellow"]
+
+                    // Recorrer el array para acceder a cada elemento
+                    colors.forEach(function (color, index) {
+                         console.log(index + ": " + color);
+                    });
+                    // Salida:
+                    // 0: Red
+                    // 1: Purple
+                    // 2: Blue
+                    // 3: Yellow
+
+                    const fruits = ["Apple", "Banana", "Cherry", "Date"];
+
+                    for (const fruit of fruits) {
+                         console.log(fruit);
+                    }
+                    // Salida:
+                    // Apple
+                    // Banana
+                    // Cherry
+                    // Date
+
+                    for (const index in fruits) {
+                         console.log(fruits[index]);
+                    }
+                    // Salida:
+                    // Apple
+                    // Banana
+                    // Cherry
+                    // Date
+
+
+                    //console.log("antes de definir primero" + fruits.primero()); // Salida: Apple
+
+                    Array.prototype.primero = function () {
+                         return this[0];
+                    };
+
+                    Array.prototype.largo = this.length > 9;
+
+                    Array.prototype.tamano = this.length;
+
+
+                    console.log("despues de definir primero" + fruits.primero()); // Salida: Apple
+                    console.log(fruits.largo ? "el array es muy largo" : "escribe mas cosas en el array"); // Salida: false
+
+                    const artist = ['Michael Jackson', 'Taylor Swift', 'David Bowie', 'Shakira', 'Izan'];
+
+                    for (let i = 0; i < artist.length; i++) {
+                         console.log(artist[i]);
+                    }
+                    // Rellenar a1 con valores aleatorios
+                    const a1 = new Array(18);
+                    const a2 = new Array(4);
+                    for (let i = 0; i < 18; i++) {
+                         a1[i] = Math.random();
+                    }
+                    for (let i = 0; i < a1.length; i++) {
+                         console.log(a1[i]);
+                    }
+
+               </script>
+          </main>
+          <footer>
+               <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+               crossorigin="anonymous"></script>
+     </body>
+
+</html>

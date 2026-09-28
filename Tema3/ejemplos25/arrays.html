@@ -19,51 +19,59 @@
           </header>
           <main>
                <script>
-                    /*
-                                        const a1 = new Array(); // Nuevo array vacío
-                                        console.log(a1.length); // Salida: 0
-                    
-                                        const a2 = new Array(4); // Nuevo array con 4 elementos
-                                        console.log(a2.length); // Salida: 4
-                    
-                                        a2[0] = "hola";
-                                        a2[1] = 88888;
-                                        a2[2] = 9999;
-                                        a2[3] = "sevilla";
-                                        a2[4] = 44444; // Fuera de los límites, no se añade
-                                        a2[40] = 44444;
-                    
-                    
-                                        for (let i = 0; i < a2.length; i++) {
-                                             console.log(a2[i]);
-                                        }
-                    
-                    
-                                        console.log(a2.length);
-                    
-                                        // Nuevo array con 3 elementos definidos
-                                        const artist = new Array('Michael Jackson', 'Taylor Swift', 'David Bowie', 'Shakira', 'Izan');
-                                        console.log(artist.length); // Salida: 3
-                    
-                                        for (let i = 0; i < artist.length; i++) {
-                                             console.log(artist[i]);
-                                        }
-                                        // Rellenar a1 con valores aleatorios
-                                        for (let i = 0; i < 10; i++) {
-                                             a1[i] = Math.random();
-                                        }
-                    
-                                        console.log(a1.length); // Salida: 10
-                                        console.log(a2.length); // Salida: 4
-                                        console.log(artist.length); // Salida: 3
-                                        console.log(a1);
-                                        console.log(a2);
-                                        console.log(artist);
-                    
-                                        // */
+
+                    const a1 = new Array(); // Nuevo array vacío
+                    console.log(a1.length); // Salida: 0
+
+                    const a2 = new Array(4); // Nuevo array con 4 elementos
+                    //  const a2 = [1, 2, 3, 4]`// es equivalente a esto
+                    console.log(a2.length); // Salida: 4
+                    for (let i = 0; i < a2.length; i++) {
+                         console.log(a2[i]);
+                    }
 
 
-                    const artist2 = ['Michael Jackson', 'Taylor Swift', 'David Bowie', 'Shakira', 'Izan'];
+                    a2[0] = "hola";
+                    a2[1] = 88888;
+                    a2[2] = 9999;
+                    a2[3] = "sevilla";
+                    a2[4] = 44444; // Fuera de los límites, no se añade
+                    a2[40] = 44444;
+
+
+                    for (let i = 0; i < a2.length; i++) {
+                         console.log(i + " : " + a2[i]);
+                    }
+
+
+                    console.log(a2.length);
+
+                    // Nuevo array con 3 elementos definidos
+                    const artist = new Array('Michael Jackson', 'Taylor Swift', 'David Bowie');
+                    console.log(artist.length); // Salida: 3
+
+                    for (let i = 0; i < artist.length; i++) {
+                         console.log(artist[i]);
+                    }
+                    // Rellenar a1 con valores aleatorios
+                    for (let i = 0; i < 18; i++) {
+                         a1[i] = Math.random();
+                    }
+                    for (let i = 0; i < a1.length; i++) {
+                         console.log(a1[i]);
+                    }
+
+                    console.log(a1.length); // Salida: 10
+                    console.log(a2.length); // Salida: 4
+                    console.log(artist.length); // Salida: 3
+                    console.log(a1);
+                    console.log(a2);
+                    console.log(artist);
+
+                    // */
+
+
+                    const artist2 = ['Michael Jackson', 'Taylor Swift', 'David Bowie', 'Shakira', 'jorge calla coño'];
 
                     console.log(artist2.length); // Salida: 3
                     console.log(artist2); // Salida: ["Michael Jackson", "Taylor Swift", "David Bowie"]
@@ -94,10 +102,14 @@
 
 
                     fruits.forEach(
-                         (fruit, i, frutas) => {
+                         (fruit, i, fruitsArray) => {
                               console.log(` ${i} : ${fruit}`);
+                              console.log(` ${i} : ${fruit.toUpperCase()}`);
+                              console.log(`  : ${fruits}`);
                          }
                     );
+
+                    fruits.forEach(fruit => console.log(` ${fruit}`));
 
 
                     Array.prototype.primero = function () {
