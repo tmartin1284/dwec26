@@ -60,6 +60,95 @@
                     allFruits.splice(2, 2, "Blueberry", "quince", "cereza", "limon", "pomelo");
                     console.log(allFruits);
 
+                    function ajofrin(fruit, index) {
+                         console.log(index + ": " + fruit);
+                    }
+                    allFruits.forEach(ajofrin);
+
+
+
+
+
+
+                    const upperCaseFruits = allFruits.map(function (fruit) {
+                         return fruit.toUpperCase();
+                    });
+                    console.log(upperCaseFruits); // Salida: ["APPLE", "BANANA", "BLUEBERRY", "DATE"]
+
+                    upperCaseFruits.forEach(fruit => console.log(": " + fruit));
+
+                    allFruits.forEach((fruit, index) => {
+                         console.log(index + ": " + fruit);
+                    });
+
+
+                    const alumnos = [{ nombre: "Juan", edad: 20 },
+                    { nombre: "María", edad: 22 },
+                    { nombre: "Pedro", edad: 19 },
+                    { nombre: "Ana", edad: 21 },
+                    { nombre: "Luis", edad: 23 },
+                    { nombre: "Lucía", edad: 20 },
+                    { nombre: "Carlos", edad: 22 },
+                    { nombre: "Sofía", edad: 19 },
+                    { nombre: "Diego", edad: 21 },
+                    { nombre: "Valentina", edad: 23 }
+                    ];
+
+
+                    alumnos.forEach((alumno, index) => {
+                         console.log(index + ": " + alumno.nombre + " - " + alumno.edad);
+                    });
+
+
+                    const edades = alumnos.map((alumno) => {
+                         return alumno.edad;
+                    });
+                    edades.forEach((edad, index) => {
+                         console.log(index + ": " + edad);
+                    });
+
+
+                    const mayores = edades.filter((edad) => {
+                         return edad >= 21;
+                    });
+
+
+                    mayores.forEach((edad, index) => {
+                         console.log(index + ": " + edad);
+                    });
+
+
+                    const alumnosmayores = alumnos.filter((alumno) => {
+                         return alumno.edad >= 21;
+                    });
+
+                    alumnosmayores.forEach((alumno, index) => {
+                         console.log(index + ": " + alumno.nombre + " - " + alumno.edad);
+                    });
+
+
+                    const totalEdades = alumnos.reduce((total, alumno) => {
+                         return total + alumno.edad;
+                    }, 0);
+
+
+                    console.log("Total de edades: " + totalEdades); // Salida: Total de edades: 210
+                    console.log(typeof totalEdades); // Salida: number
+
+                    const edadmayor = alumnos.reduce((mayor, alumno) => {
+                         return mayor > alumno.edad ? mayor : alumno.edad;
+                    }, 0);
+
+                    console.log("Edad mayor: " + edadmayor); // Salida: Edad mayor: 23
+
+
+                    const alumnoviejo = alumnos.reduce((mayor, alumno) => {
+                         return mayor.edad >= alumno.edad ? mayor : alumno;
+                    }, { nombre: "", edad: 0 });
+
+
+                    console.log("Alumno más viejo: " + alumnoviejo.nombre + " - " + alumnoviejo.edad); // Salida: Alumno más viejo: Luis - 23
+
 
 
                     console.log("estoy vivo"); // Salida: ["Apple", "Banana", "Cherry", "Date"]

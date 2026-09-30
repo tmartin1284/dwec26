@@ -47,9 +47,18 @@
                          arrancar: function () { return ('brum brum'); }
                     }
 
-                    // Acceder a las propiedades
-                    console.log(`Make: ${myCar2.make} Model: ${myCar2.model} ${myCar2.arrancar()}`);
+                    myCar2.puertas = 3;
 
+                    // Acceder a las propiedades
+                    console.log(`Make: ${myCar2.make} Model: ${myCar2.model} Puertas: ${myCar2.puertas} ${myCar2.arrancar()}`);
+
+                    const myCar3 = {
+                         make: 'Seat',
+                         moddel: '600',
+                         year: '1965',
+                         color: 'blanco',
+                         arrancar: function () { return ('brum brum'); }
+                    }
 
 
 
@@ -83,6 +92,14 @@
                          { brand: "Ford", model: "Mustang", year: 2021 }
                     ];
 
+
+                    const persons = [
+                         new Person("John", "Doe", 30),
+                         new Person("Jane", "Smith", 25),
+                         new Person("Alice", "Johnson", 28)
+                    ];
+
+
                     // Acceder a los objetos en el array
                     console.log(cars[0]); // Salida: { brand: "Toyota", model: "Corolla", year: 2020 }
 
@@ -99,6 +116,21 @@
                     cars.forEach(function (car) {
                          console.log(`${car.brand} ${car.model ? car.model : ""} (${car.year})`);
                     });
+
+
+
+                    persons.forEach((person) => {
+                         console.log(`${person.firstName} ${person.lastName} (${person.age})`);
+                    });
+
+                    const mayores = persons.filter((person) => {
+                         return person.age >= 28;
+                    });
+                    mayores.forEach((person) => {
+                         console.log(`${person.firstName} ${person.lastName} (${person.age})`);
+                    });
+
+
                </script>
           </main>
           <footer>
