@@ -12,9 +12,15 @@ function procesarJSON(jsondata) {
 
   let plantilla = document.getElementById("plantilla");
   let contenedor = plantilla.parentNode;
-  //contenedor.removeChild(plantilla);
+  contenedor.removeChild(plantilla);
   const heroes = jsondata.data.results;
+
+  for (hero of heroes) {
+  }
+
   /*
+
+  
 
 
 aqui metemos el codigo para crear las tarjetas de los heroes
@@ -56,7 +62,7 @@ aqui metemos el codigo para crear las tarjetas de los heroes
         `
       </html>`,
     ],
-    { type: "html" }
+    { type: "html" },
   );
   const url = URL.createObjectURL(archivo);
   a.href = url;
