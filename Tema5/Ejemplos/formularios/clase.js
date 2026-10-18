@@ -79,8 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       markFieldAsValid(acceptall);
     }
-
-    if (!isValidChupetones(chupetones.value)) {
+    console.log(chupetones.options[chupetones.selectedIndex].value);
+    if (
+      !isValidChupetones(chupetones.options[chupetones.selectedIndex].value)
+    ) {
       markFieldAsNotValid(
         chupetones,
         "El número de chupetones debe estar entre 1 y 6.",
