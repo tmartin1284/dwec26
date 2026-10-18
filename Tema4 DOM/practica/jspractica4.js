@@ -16,6 +16,26 @@ function procesarJSON(jsondata) {
   const heroes = jsondata.data.results;
 
   for (hero of heroes) {
+    const card = plantilla.cloneNode(true);
+    card.setAttribute("id", `card-${hero.id}`);
+    card.getElementsByTagName("h5")[0].textContent = hero.name;
+    card.getElementsByTagName("p")[0].textContent = " " + hero.description;
+
+    const img = card.getElementsByTagName("img")[0];
+    console.log(img);
+    img.setAttribute(
+      "src",
+      hero.thumbnail.path + "." + hero.thumbnail.extension,
+    );
+
+    img.setAttribute("alt", hero.name);
+
+    const lilists = card.getElementsByTagName("li");
+    lilists[0].textContent = "Aparece en " + hero.comics.available + " cómics";
+    lilists[1].textContent = "Aparece en " + hero.series.available + " series";
+    lilists[2].textContent =
+      "Aparece en " + hero.stories.available + " historias";
+    contenedor.appendChild(card);
   }
 
   /*

@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const password = document.getElementById("password");
   const passwordck = document.getElementById("passwordchek");
   const acceptall = document.getElementById("Check1");
+  const chupetones = document.getElementById("chupetones");
 
   // Crear el manejador del evento para el envío del formulario ('submit')
   form.addEventListener("submit", function (event) {
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (!isValidEmail(email.value)) {
       markFieldAsNotValid(
         email,
-        "Por favor, proporciona una dirección de correo válida."
+        "Por favor, proporciona una dirección de correo válida.",
       );
       isValid = false;
     } else {
@@ -79,6 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
       markFieldAsValid(acceptall);
     }
 
+    if (!isValidChupetones(chupetones.value)) {
+      markFieldAsNotValid(
+        chupetones,
+        "El número de chupetones debe estar entre 1 y 6.",
+      );
+      isValid = false;
+    } else {
+      markFieldAsValid(chupetones);
+    }
     // Después de validar todos los campos, devolvemos el valor de la bandera isValid
     return isValid;
   }
@@ -94,6 +104,10 @@ function isValidEmail(email) {
 
 function isValidPassword(passwd) {
   return passwd.length >= 6;
+}
+
+function isValidChupetones(chupetones) {
+  return !isNaN(chupetones) && chupetones >= 1 && chupetones <= 6;
 }
 
 // Esta función marca un campo como no válido y añade el mensaje de error
