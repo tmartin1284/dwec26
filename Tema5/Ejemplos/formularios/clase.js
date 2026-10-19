@@ -54,23 +54,28 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       markFieldAsValid(email);
     }
-
+    console.log("password.value: " + password.value);
+    console.log("passwordck.value: " + passwordck.value);
     if (password.value !== passwordck.value) {
-      markFieldAsNotValid(passwordck);
-      markFieldAsNotValid(password);
+      markFieldAsNotValid(passwordck, "Las contraseñas no coinciden");
+      markFieldAsNotValid(password, "Las contraseñas no coinciden");
+      console.log("Las contraseñas no coinciden");
       isValid = false;
     } else {
-      markFieldAsValid(passwordck);
-      markFieldAsValid(password);
-    }
-
-    if (!isValidPassword(password.value)) {
-      markFieldAsNotValid(password);
-      markFieldAsNotValid(passwordck);
-      isValid = false;
-    } else {
-      markFieldAsValid(password);
-      markFieldAsValid(passwordck);
+      if (!isValidPassword(password.value)) {
+        markFieldAsNotValid(
+          password,
+          "La contraseña debe tener al menos 6 caracteres",
+        );
+        markFieldAsNotValid(
+          passwordck,
+          "La contraseña debe tener al menos 6 caracteres",
+        );
+        isValid = false;
+      } else {
+        markFieldAsValid(password);
+        markFieldAsValid(passwordck);
+      }
     }
 
     if (!acceptall.value) {
@@ -120,10 +125,12 @@ function markFieldAsNotValid(element, message) {
   }
   // Añadiendo la clase que muestra el mensaje de error y añade el borde rojo (css)
   element.parentNode.classList.add("is-not-valid-field");
+  console.log(element.parentNode.classList);
+  console.log("Campo no válido: " + element.id);
 }
 
 // Esta función marca un campo como válido y oculta el mensaje de error
 function markFieldAsValid(element) {
   element.parentNode.classList.remove("is-not-valid-field");
-  element.parentNode.querySelector(".error-message").textContent = "";
+  // element.parentNode.querySelector(".error-message").textContent = "";
 }
