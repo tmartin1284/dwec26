@@ -1,0 +1,17 @@
+GET http://localhost:3000/posts HTTP/1.1
+
+####
+
+GET http://localhost:3000/comments/3 HTTP/1.1
+
+
+#### 
+POST http://localhost:3000/comments HTTP/1.1
+content-type: application/json
+
+{
+  "title": "finde santos",
+  "body": "Este es un nuevo chupetón",
+  "userId": 1
+}
+
