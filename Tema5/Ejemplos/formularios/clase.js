@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Esta bandera se inicializa como true.
     // En caso de encontrar un error en un campo, esta variable se convierte en false.
     var isValid = true;
-    console.log("entra a validar");
+
 
     // Lógica de validación personalizada
     // Ejemplo de validación personalizada solo comprobando la longitud
@@ -54,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       markFieldAsValid(email);
     }
-    console.log("password.value: " + password.value);
-    console.log("passwordck.value: " + passwordck.value);
+
     if (password.value !== passwordck.value) {
       markFieldAsNotValid(passwordck, "Las contraseñas no coinciden");
       markFieldAsNotValid(password, "Las contraseñas no coinciden");
@@ -63,14 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     } else {
       if (!isValidPassword(password.value)) {
-        markFieldAsNotValid(
-          password,
-          "La contraseña debe tener al menos 6 caracteres",
-        );
-        markFieldAsNotValid(
-          passwordck,
-          "La contraseña debe tener al menos 6 caracteres",
-        );
+        markFieldAsNotValid(password);
+        markFieldAsNotValid(passwordck);
         isValid = false;
       } else {
         markFieldAsValid(password);
@@ -84,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       markFieldAsValid(acceptall);
     }
-    console.log(chupetones.options[chupetones.selectedIndex].value);
     if (
       !isValidChupetones(chupetones.options[chupetones.selectedIndex].value)
     ) {
@@ -125,12 +117,11 @@ function markFieldAsNotValid(element, message) {
   }
   // Añadiendo la clase que muestra el mensaje de error y añade el borde rojo (css)
   element.parentNode.classList.add("is-not-valid-field");
-  console.log(element.parentNode.classList);
-  console.log("Campo no válido: " + element.id);
+
 }
 
 // Esta función marca un campo como válido y oculta el mensaje de error
 function markFieldAsValid(element) {
   element.parentNode.classList.remove("is-not-valid-field");
-  // element.parentNode.querySelector(".error-message").textContent = "";
+  element.parentNode.querySelector(".error-message").textContent = "";
 }
